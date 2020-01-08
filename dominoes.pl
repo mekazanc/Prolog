@@ -1,7 +1,7 @@
 % run it with sequence(NewList3).
 
 sequence(NewList3):-
-    % create potential lists
+    % create potential lists. Max element can be 3 (it is a constraint in the question)
     findall(D,permutate(D,[0,1,2,3]),List),
     % remove list which contains repeated sublists such as[[1,0],[1,0]..]. 
     all_different2(List,NewList),
